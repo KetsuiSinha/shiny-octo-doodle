@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Complex Interactive Dashboard with Sidebar</title>
+  <style>
+    /* CSS styling for the dashboard */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      display: flex;
+    }
+
+    .sidebar {
+      width: 200px;
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+    }
+
+    .dashboard {
+      flex-grow: 1;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+
+    .widget {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+
+    .widget h2 {
+      margin: 0;
+    }
+
+    .widget p {
+      margin-top: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+
+    .button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Sidebar</h2>
+      <ul>
+        <li><a href="#">Dashboard 1</a></li>
+        <li><a href="#">Dashboard 2</a></li>
+        <li><a href="#">Dashboard 3</a></li>
+      </ul>
+    </div>
+    <div class="dashboard">
+      <div class="widget">
+        <h2>Widget 1</h2>
+        <p>This is the content of Widget 1.</p>
+      </div>
+      <div class="widget">
+        <h2>Widget 2</h2>
+        <p>This is the content of Widget 2.</p>
+        <a href="#" class="button">Click Me</a>
+      </div>
+      <div class="widget">
+        <h2>Widget 3</h2>
+        <p>This is the content of Widget 3.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript for sidebar functionality
+    const sidebar = document.querySelector('.sidebar');
+    const toggleButton = document.createElement('button');
+    toggleButton.innerText = 'Toggle Sidebar';
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('sidebar-collapsed');
+    });
+    sidebar.appendChild(toggleButton);
+  </script>
+</body>
+</html>
